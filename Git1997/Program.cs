@@ -11,31 +11,24 @@ namespace Git1997
             Console.WriteLine("-----------MENU--------------");
             Console.WriteLine("1) Agregar empleados.");
             Console.WriteLine("2) Lista de empleados.");
-            Console.WriteLine("2) Salir");
+            Console.WriteLine("3) Salir");
+            Console.WriteLine("Seleccione una opcion: ");
+            char Opcion = char.Parse(Console.ReadLine());
+            switch (Opcion)
+            {
+                case '1':
+                    Console.WriteLine("------Agregar Empleado-----");
+                    break;
+                case '2':
+                    Console.WriteLine("------List de Empleados-----");
+                    break;
+                case '3':
+                    Console.WriteLine("------Saliendo-----");
+                    break;
+                default:
+                    Console.WriteLine("------Opcion Invalida----");
+                    break;
+            }
         }
-    }
-    abstract class Empleado
-    {
-        public Empleado()
-        {
-
-        }
-
-        protected Empleado(string tipoEmpleado, string nombre, char genero, double salario)
-        {
-            TipoEmpleado = tipoEmpleado;
-            Nombre = nombre;
-            Genero = genero;
-            Salario = salario;
-        }
-
-        public string TipoEmpleado { get; set; }
-        public string Nombre { get; set; }
-        public char Genero { get; set; }
-        public double Salario { get; set; }
-        public abstract double CalCularSalario();
-
-
-
     }
 }

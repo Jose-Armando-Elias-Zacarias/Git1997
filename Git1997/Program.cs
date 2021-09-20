@@ -18,6 +18,30 @@ namespace Git1997
             {
                 case '1':
                     Console.WriteLine("------Agregar Empleado-----");
+                    Console.WriteLine("Ingrese el Nombre del Empleado");
+                    string Nombre = Console.ReadLine();
+                    Console.WriteLine("Ingrese el genero del empleado");
+                    string Genero = Console.ReadLine();
+                    Console.WriteLine("Ingrese el salario base del empleado");
+                    double Salario = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Seleccione el tipo de empleado a crear");
+                    Console.WriteLine("/t 1) Gerente");
+                    Console.WriteLine("/t 1) Vededor");
+                    Console.WriteLine("Tipo: ");
+                    char TipoEmpleado = char.Parse(Console.ReadLine());
+                    switch (TipoEmpleado)
+                    {
+                        case '1':
+                            Console.WriteLine("Ingrese el puesto del Gerente: ");
+                            string Puesto = Console.ReadLine();
+                            break;
+                        case '2':
+                            Console.WriteLine();
+                            break;
+                        default:
+                            Console.WriteLine("Tipo Invalido. ");
+                            break;
+                    }
                     break;
                 case '2':
                     Console.WriteLine("------List de Empleados-----");

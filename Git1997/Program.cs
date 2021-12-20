@@ -20,6 +20,7 @@ namespace Git1997
                     Console.WriteLine("------Agregar Empleado-----");
                     Console.WriteLine("Ingrese el Nombre del Empleado");
                     string Nombre = Console.ReadLine();
+                    Gerente gerente = new Gerente(Gerente, Nombre, Salario, Genero, Puesto);
                     Console.WriteLine("Ingrese el genero del empleado");
                     string Genero = Console.ReadLine();
                     Console.WriteLine("Ingrese el salario base del empleado");
@@ -37,6 +38,13 @@ namespace Git1997
                             break;
                         case '2':
                             Console.WriteLine();
+                            foreach (var ger  in  gerentes )
+                            {
+                                Console.WriteLine(ger.Nombre);
+                                Consola.WriteLine(ger.TipoEmpleado);
+                                Consola.WriteLine(ger.PuestoGerente);
+                                Consola.WriteLine(ger.CalcularSalario());
+                            }
                             break;
                         default:
                             Console.WriteLine("Tipo Invalido. ");

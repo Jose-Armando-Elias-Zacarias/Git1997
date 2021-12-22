@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Git1997
 {
     class Program
     {
+        static List<Gerente> gerentes = new List<Gerente>();
         static void Main(string[] args)
         {
             Console.WriteLine("Inicio del proyecto!");
@@ -20,7 +22,6 @@ namespace Git1997
                     Console.WriteLine("------Agregar Empleado-----");
                     Console.WriteLine("Ingrese el Nombre del Empleado");
                     string Nombre = Console.ReadLine();
-                    Gerente gerente = new Gerente(Gerente, Nombre, Salario, Genero, Puesto);
                     Console.WriteLine("Ingrese el genero del empleado");
                     string Genero = Console.ReadLine();
                     Console.WriteLine("Ingrese el salario base del empleado");
@@ -35,16 +36,11 @@ namespace Git1997
                         case '1':
                             Console.WriteLine("Ingrese el puesto del Gerente: ");
                             string Puesto = Console.ReadLine();
+                            Gerente gerente = new Gerente(" Gerente", Nombre, Salario, Genero, Puesto);
+                            gerentes.Add(gerente);
                             break;
                         case '2':
                             Console.WriteLine();
-                            foreach (var ger  in  gerentes )
-                            {
-                                Console.WriteLine(ger.Nombre);
-                                Consola.WriteLine(ger.TipoEmpleado);
-                                Consola.WriteLine(ger.PuestoGerente);
-                                Consola.WriteLine(ger.CalcularSalario());
-                            }
                             break;
                         default:
                             Console.WriteLine("Tipo Invalido. ");
@@ -52,7 +48,16 @@ namespace Git1997
                     }
                     break;
                 case '2':
-                    Console.WriteLine("------List de Empleados-----");
+                    Console.WriteLine("------List de Empleados de la empresa-----");
+                    foreach (var ger in gerentes)
+                    {
+                        Console.WriteLine("Datos del gerente:");
+                        Console.WriteLine($"\tNombre: {ger.Nombre}");
+                        Console.WriteLine($"\tTipo gerente: {ger.TipoEmpleado}");
+                        Console.WriteLine($"\tPuesto: {ger.Genero}");
+                        Console.WriteLine($"\tSalario: {ger.CalCularSalario()}");
+                        Console.WriteLine();
+                    }
                     break;
                 case '3':
                     Console.WriteLine("------Saliendo-----");

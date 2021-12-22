@@ -8,7 +8,7 @@ namespace Git1997
         {
 
         }
-        public Gerente(string tipoEmpleado, string nombre, double salario)
+        public Gerente(string tipoEmpleado, string nombre, double salario, string genero, object puesto)
         {
             Salario = salario;
             Nombre = nombre;

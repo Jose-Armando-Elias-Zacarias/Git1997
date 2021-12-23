@@ -8,7 +8,7 @@ namespace Git1997
 
         }
 
-        protected Empleado(string tipoEmpleado, string nombre, char genero, double salario)
+        public Empleado(string tipoEmpleado, string nombre, char genero, double salario)
         {
             TipoEmpleado = tipoEmpleado;
             Nombre = nombre;

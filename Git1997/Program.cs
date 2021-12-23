@@ -36,7 +36,7 @@ namespace Git1997
                         case '1':
                             Console.WriteLine("Ingrese el puesto del Gerente: ");
                             string Puesto = Console.ReadLine();
-                            Gerente gerente = new Gerente("Gerente", Nombre, Genero, Salario);
+                            Gerente gerente = new Gerente("Gerente", Nombre,Salario, Genero);
                             gerentes.Add(gerente);
                             break;
                         case '2':

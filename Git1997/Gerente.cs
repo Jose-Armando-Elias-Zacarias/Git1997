@@ -8,10 +8,11 @@ namespace Git1997
         {
 
         }
-        public Gerente(string tipoEmpleado, string nombre, double salario, string genero, object puesto)
+        public Gerente(string tipoEmpleado, string nombre, double salario, char genero)
         {
             Salario = salario;
             Nombre = nombre;
+            Genero = genero;
             TipoEmpleado = tipoEmpleado;
         }
         public override double CalCularSalario()

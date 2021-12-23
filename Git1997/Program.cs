@@ -23,7 +23,7 @@ namespace Git1997
                     Console.WriteLine("Ingrese el Nombre del Empleado");
                     string Nombre = Console.ReadLine();
                     Console.WriteLine("Ingrese el genero del empleado");
-                    string Genero = Console.ReadLine();
+                    char Genero = Convert.ToChar(Console.ReadLine());
                     Console.WriteLine("Ingrese el salario base del empleado");
                     double Salario = double.Parse(Console.ReadLine());
                     Console.WriteLine("Seleccione el tipo de empleado a crear");
@@ -36,7 +36,7 @@ namespace Git1997
                         case '1':
                             Console.WriteLine("Ingrese el puesto del Gerente: ");
                             string Puesto = Console.ReadLine();
-                            Gerente gerente = new Gerente(" Gerente", Nombre, Salario, Genero, Puesto);
+                            Gerente gerente = new Gerente("Gerente", Nombre, Genero, Salario);
                             gerentes.Add(gerente);
                             break;
                         case '2':

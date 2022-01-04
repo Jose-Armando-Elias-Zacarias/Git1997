@@ -19,8 +19,16 @@ namespace Git1997
 
         public String TipoSecretaria { get; set; }
         public String Area { get; set; }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
         public override double CalCularSalario()
+=======
+        public override double CalcularSalario()
+>>>>>>> 3e2ef74 (se agrego la clase secretaria)
+=======
+        public override double CalcularSalario()
+>>>>>>> 3e2ef74 (se agrego la clase secretaria)
         {
             return base.Salario * 1.05;
         }

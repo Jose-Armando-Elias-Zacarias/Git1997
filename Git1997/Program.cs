@@ -55,8 +55,6 @@ namespace Git1997
                         Console.WriteLine($"\tNombre: {ger.Nombre}");
                         Console.WriteLine($"\tTipo gerente: {ger.TipoEmpleado}");
                         Console.WriteLine($"\tPuesto: {ger.Genero}");
-                        Console.WriteLine($"\tSalario: {ger.CalCularSalario()}");
-
 
                         Console.WriteLine("--------------------------------------------------------");
                         Console.WriteLine();

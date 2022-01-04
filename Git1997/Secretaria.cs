@@ -19,9 +19,10 @@ namespace Git1997
 
         public String TipoSecretaria { get; set; }
         public String Area { get; set; }
-        public override double CalcularSalario()
+        public override double CalCularSalario()
         {
             return base.Salario * 1.05;
         }
+    
     }
 }

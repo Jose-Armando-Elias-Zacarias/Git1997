@@ -56,13 +56,11 @@ namespace Git1997
                         Console.WriteLine($"\tTipo gerente: {ger.TipoEmpleado}");
                         Console.WriteLine($"\tPuesto: {ger.Genero}");
                         Console.WriteLine($"\tSalario: {ger.CalCularSalario()}");
-<<<<<<< HEAD
-                        Console.WriteLine("-------------------------------------------");
-=======
+
+
                         Console.WriteLine("--------------------------------------------------------");
                         Console.WriteLine();
 
->>>>>>> completar-gerente
                     }
                     break;
                 case '3':
